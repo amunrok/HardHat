@@ -7,7 +7,12 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-//= require materialize
+
+import 'materialize-css/dist/js/materialize'
+
+$(document).on("turbolinks:load", function() {
+    $(".dropdown-trigger").dropdown();
+})
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
